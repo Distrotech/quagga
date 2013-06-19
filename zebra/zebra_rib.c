@@ -2741,6 +2741,8 @@ static_install_ipv6 (struct prefix *p, struct static_ipv6 *si)
       rib->distance = si->distance;
       rib->metric = 0;
       rib->nexthop_num = 0;
+      rib->table = zebrad.rtm_table_default;
+      rib->table = zebrad.rtm_table_default;
 
       switch (si->type)
 	{
